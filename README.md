@@ -4,7 +4,7 @@
 
 #Informal Exercises 
 - Module 1 
-  -
+  - [Tuesday](Tues1.md)
 - Module 2
 
 

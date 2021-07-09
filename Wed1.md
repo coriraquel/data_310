@@ -20,3 +20,11 @@
       - Answer: Yes, it was predicted to be a pullover and it was 
     - Why did we not use Softmax() a second time? 
       - Answer: We did not use Softmax() because we were only grabbing the predictions for the single image in our batch instead of getting a list of lists for each image in the batch of data
+    - Evaluate how your model for the MNIST dataset compared with your model of the Fashion_MNIST dataset. Which of the two models is more accurate? Why do you think this is so?
+        - Answer: The MNIST dataset was more accurate at 98% versus the Fashion_MNIST at 91%. I think it's more accurate because its out preforming the Fashong_MNIST in the training and testing data so it is making better predictions more of the time. 
+    - MNST Results: 
+        - Train Accuracy: 98%
+        - Test Accuracy: 99%
+        - Images: 
+            - ![](images/bleh.PNG)
+            - ![](images/bleh2.PNG)

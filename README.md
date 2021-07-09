@@ -5,6 +5,7 @@
 #Informal Exercises 
 - Module 1 
   - [Tuesday](Tues1.md)
+  - [Wednesday](Wed1.md)
 - Module 2
 
 

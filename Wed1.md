@@ -1,9 +1,9 @@
 # Informal Reponse 
 
 - Produce 3 new images: 
-    - ![](Capture.png)
-    - ![](Capture1.png)
-    - ![](Capture3.png)
+    - ![](images/Capture.png)
+    - ![](images/Capture1.png)
+    - ![](images/Capture3.png)
     
 - Array of predictions other than example array: 
     - What does this array represent? 
@@ -13,8 +13,8 @@
     - Does the output label from np.argmax() match test_labels dataset?
       - Answer: yes for predicting image #1 both of my labels came out as 2
 - Two Plotted Additional Images with image and predicted label: 
-  - ![](Capture4.png)
-  - ![](Capture5.png)
+  - ![](images/Capture4.png)
+  - ![](images/Capture5.png)
 - New test dataset 
     - Does the predicted value match the test label?
       - Answer: Yes, it was predicted to be a pullover and it was 

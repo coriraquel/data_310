@@ -1,9 +1,8 @@
 # Informal Reponse 
 
 - Produce 3 new images: 
-    - ![](images/Capture.png)
-    - ![](images/Capture1.png)
-    - ![](images/Capture3.png)
+    - ![](images/Capture.PNG)
+    - ![](images/Capture1.PNG)
     
 - Array of predictions other than example array: 
     - What does this array represent? 

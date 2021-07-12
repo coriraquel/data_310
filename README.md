@@ -13,5 +13,5 @@
 
 ## Projects 
 - Project 1 
-  - [Project_1](Project_1.md)
+  - [Project1](Project_1.md)
 - Project 2

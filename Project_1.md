@@ -10,14 +10,18 @@ I began my project with the descriptive statistics of the 200 houses in San Fran
     - ![](images/sum.PNG)
   - *Figure 2*
     - ![](images/bar.PNG)
-- How did your model fare?
-  - Answer: My model went okay, while the MSE was fairly high (560.195) indicating a large amount of error in the model, when it came to predicting prices at a generally lower price the model did far better than predicting models at a higher price. 
-  ![](images/Proj1.PNG)
-    ![](images/Proj_im2.PNG)
-- In your estimation is there a particular variable that may improve model performance?
-  - Answer: I think looking at neighborhods/zip codes would improve the models performance. Neighborhoods are often sectioned off by prices and have similar sized homes so being able to examine where in the city a house is located would help to improve price predictions.
-- Which of the predictions were the most accurate? In which percentile do these most accurate predictions reside? Did your model trend towards over or under predicting home values?
-  - Answer: The houses lower in price were the most accurate, the most accurate predictions are around the  25th percentile. My model tended to under predict the values of the home.
-- Which feature appears to be the most significant predictor?
-    - Answer: Square footage appeared to be the most significant predictor when square footage went up housing prices usually followed as well. 
-  
+      - *for this graph I wanted to compare housing prices to number of bedrooms and bathrooms in a home to price but when attempting to put the price on the x-axis I got this error message* 
+      - ValueError: x must be a label or position
+  #### Methods and Training 
+To analyze the data I used TensorFlow to train the model. I complied the data into three layers. After training the model I predicted housing prices and added that to my dataframe as a column. I also produced a heat map to show correlation between price and different features within the model. These are my results. 
+  - *figure 3*
+   ![](images/Proj1.PNG)
+  - *figure 4*
+   ![](images/Proj_im2.PNG)
+  - *figure 5*
+    ![](images/heatmap.PNG)
+    ### Personal Findings
+    I found that my model preformed terribly the MSE was very high at 602.71. I think this could be for a lot of reasons, but my first suspicion is the amount of data I had available. While I'm sure lots of things went wrong the limited amount of data I had probably did not help. If I had to add anything to this model to improve it I would look into how to add categorical data to it such as zip codes or neighborhood labels. In my personal experience I know neighborhoods tend to be grouped off by price so by giving this additional information I think it could allow the model to predict the price more accurately. 
+    I found from my scatter graph that the lower the houses were in price the more accurate the predicted prices tended to be. When the houses became more expensive the model had a more difficult time to predict the price. Most of the accurate predictions appear in the 25th percentile. From the Line of Best Fit graph, it looked as though my model tended to under predict the home values although I am not sure why. I think I could improve the model by removing these outliers or trying to add another parameter (such as zipcode) to help improve the model as well. 
+    From the heatmap I concluded that Square Footage as the most effect on price with a correlation of 90%. 
+ 

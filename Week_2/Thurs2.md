@@ -5,12 +5,15 @@ the first filter I wanted to see what would happen with bigger numbers, it seems
 
     filter = [ [-400, 0, -400], [0, 0, 0], [1, 2, 1]]
 
-- ![image](plot1.PNG)
+- ![image](../myimages/plot2.png)
+  
+
+- ![image](../images/plot3.PNG)
 
 the second filter was the best in my opinion, it highlighted straight lines so detailed that even wiggly lines were highlighted, while I'm not sure if it would be best for a model it was the best filter.
 
     filter = [ [-45, 0, 45], [-4, 0, 4], [-7, 0, 7]]
-- ![image2](images/plot2.PNG)
+- ![image2]()
     
 the third filter was okay it did highlight straight lines, but it left out a lot of detail, and I don't think it would do very well outside a training data set.
 

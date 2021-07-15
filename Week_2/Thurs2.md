@@ -17,3 +17,4 @@ Another useful method is pooling. Apply a 2x2 filter to one of your convolved im
 In effect what have you accomplished by applying this filter? Does there seem to be a logic (i.e. maximizing, averaging or minimizing values?) associated with the pooling filter provided in the example exercise (convolutions & pooling)? Did the resulting image increase in size or decrease? Why would this method be useful?
 I have found the least amount of the biggest pixels in the image after a series of iteration. Yes, there is logic because we are getting the smallest amount of the biggest value for this pooling feature. No in fact it was 1/4th in size of the old image. This can be useful when we don't want to lose any important information but want to filter out what's not needed for time and memory purposes. 
 
+New Pixel Value= 0 

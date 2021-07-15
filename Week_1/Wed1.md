@@ -1,9 +1,9 @@
 # Informal Response
 
 - Produce 3 new images: 
-    - ![](images/Capture.PNG)
-    - ![](images/Capture1.PNG)
-    - ![](images/Capture3.PNG)
+    - ![](../images/Capture.PNG)
+    - ![](../images/Capture1.PNG)
+    - ![](../images/Capture3.PNG)
     
     
     
@@ -15,8 +15,8 @@
     - Does the output label from np.argmax() match test_labels dataset?
       - Answer: yes for predicting image #1 both of my labels came out as 2
 - Two Plotted Additional Images with image and predicted label: 
-  - ![](images/Capture4.PNG)
-  - ![](images/Capture5.PNG)
+  - ![](../images/Capture4.PNG)
+  - ![](../images/Capture5.PNG)
 - New test dataset 
     - Does the predicted value match the test label?
       - Answer: Yes, it was predicted to be a pullover and it was 
@@ -28,5 +28,5 @@
         - Train Accuracy: 98%
         - Test Accuracy: 99%
         - Images: 
-            - ![](images/bleh.PNG)
-            - ![](images/bleh2.PNG)
+            - ![](../images/bleh.PNG)
+            - ![](../images/bleh2.PNG)

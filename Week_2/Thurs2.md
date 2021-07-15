@@ -1,17 +1,21 @@
 ### Wednesday No Class Response 
 Modify the existing filter and if needed the associated weight in order to apply your new filters to the image 3 times. Plot each result, upload them to your response, and describe how each filter transformed the existing image as it convolved through the original array and reduced the object size.
 
-filter = [ [-400, 0, -400], [0, 0, 0], [1, 2, 1]]
-    - the first filter I wanted to see what would happen with bigger numbers, it seems that it removed ALL information to including the straight lines to leave us with a black screen so, going to high is not helpful when it comes to convolutions.
-    - ![image](plot1.PNG)
+the first filter I wanted to see what would happen with bigger numbers, it seems that it removed ALL information to including the straight lines to leave us with a black screen so, going to high is not helpful when it comes to convolutions.
+
+    filter = [ [-400, 0, -400], [0, 0, 0], [1, 2, 1]]
+
+- ![image](plot1.PNG)
+
+the second filter was the best in my opinion, it highlighted straight lines so detailed that even wiggly lines were highlighted, while I'm not sure if it would be best for a model it was the best filter.
+
+    filter = [ [-45, 0, 45], [-4, 0, 4], [-7, 0, 7]]
+- ![image2](images/plot2.PNG)
     
-filter = [ [-45, 0, 45], [-4, 0, 4], [-7, 0, 7]]
-    - the second filter was the best in my opinion, it highlighted straight lines so detailed that even wiggly lines were highlighted, while I'm not sure if it would be best for a model it was the best filter. 
-    - ![image2](images/plot2.PNG)
-    
-filter = [ [0, 1, 0], [1, -4, 1], [0, 1, 0]]
-    - the third filter was okay it did highlight straight lines, but it left out a lot of detail, and I don't think it would do very well outside a training data set. 
-    - ![image3] (images/plot3.PNG)
+the third filter was okay it did highlight straight lines, but it left out a lot of detail, and I don't think it would do very well outside a training data set.
+
+    filter = [ [0, 1, 0], [1, -4, 1], [0, 1, 0]]
+- ![image3] (images/plot3.PNG)
   
 - Each different filter learns how to isolate and take out specific features within them that are deemed important, this in turn changes the data set so that different details in the photo are emphasized. 
 

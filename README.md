@@ -10,6 +10,7 @@
 - Module 2
 - [Monday]
 - [Tuesday](Week_2/Tues2.md)
+- [Thursday](Week_2/Thurs2.md)
 
 
 

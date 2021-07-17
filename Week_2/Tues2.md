@@ -1,3 +1,4 @@
+#HIGGS Dataset 
 - Describe the dataset. What type of variable is the target? How many features are being used? How many observations are in the training dataset? How many are used in the validation set?
     - The variable type for the target is binary. 
       

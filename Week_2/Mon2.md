@@ -1,1 +1,2 @@
-Produce a plot that supports your answer. Return to the remainder of the variables from the dataset and add additional continuous and categorical features with the intent of improving your loss metric. Produce a plot that demonstrates the value of your model. What is the best model your team was able to produce?
+Group Work With Michael Cusack-Nelson: 
+    - https://michaelcusacknelkin.github.io/DATA310/Informal%20Responses/7.12.2021-Group2.html

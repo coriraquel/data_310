@@ -8,13 +8,14 @@
   - [Wednesday](Week_1/Wed1.md)
   - [Thursday](Week_1/Thurs1.md)
 - Module 2
-- [Monday](Week_2/Mon2.md)
-- [Tuesday](Week_2/Tues2.md)
-- [Thursday](Week_2/TuestPt2.md)
+  -   [Monday](Week_2/Mon2.md)
+      
+  - [Tuesday](Week_2/Tues2.md)
+  -  [Thursday](Week_2/TuestPt2.md)
 
 
 
 ## Projects 
 - Project 1 
-  - [Project1](Week_1/Project_1.md)
+  - [Project_1](Week_1/Project_1.md)
 - Project 2

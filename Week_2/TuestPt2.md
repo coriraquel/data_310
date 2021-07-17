@@ -11,11 +11,13 @@ For the first filter I wanted to see what would happen with bigger numbers, it s
 The second filter was the best in my opinion, it highlighted straight lines so detailed that even wiggly lines were highlighted, while I'm not sure if it would be best for a model it did provide the most information out of all of my filters. 
 
     filter = [ [-45, 0, 45], [-4, 0, 4], [-7, 0, 7]]
+
 - ![image3](../images/plot3.PNG)
     
 The third filter was okay it did highlight straight lines, but it left out a lot of detail, and I don't think it would do very well outside a training data set.
 
     filter = [ [0, 1, 0], [1, -4, 1], [0, 1, 0]]
+
 - ![image4](../Week_2/img.png)
   
 Each different filter learns how to isolate and take out specific features within them that are deemed important, this in turn changes the data set so that different details in the photo are emphasized. 

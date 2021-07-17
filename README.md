@@ -8,7 +8,7 @@
   - [Wednesday](Week_1/Wed1.md)
   - [Thursday](Week_1/Thurs1.md)
 - Module 2
-- [Monday]
+- [Monday](Week_2/Mon2.md)
 - [Tuesday](Week_2/Tues2.md)
 - [Thursday](Week_2/TuestPt2.md)
 

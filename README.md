@@ -12,6 +12,9 @@
   - [Tuesday](Week_2/Tues2.md)
   - [Tuesday Part 2](Week_2/TuestPt2.md)
   - [Thursday](Week_2/Thurs2.md)
+  
+- Module 3
+  - [Monday]
 
 
 

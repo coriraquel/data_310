@@ -14,7 +14,8 @@
   - [Thursday](Week_2/Thurs2.md)
   
 - Module 3
-  - [Monday]
+  - [Monday](Week_3/Mon3.md)
+  - [Tuesday](Week_3/Tues3.md)
 
 
 

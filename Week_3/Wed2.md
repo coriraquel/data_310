@@ -1,3 +1,4 @@
+### Group work with Annabel Richter and John Willis
 ### The Setup
 We used a city_person.csv file that contained the size, gender, age, education and wealth of different families. We imported this csv file into a pandas dataframe then created a new "wealthC" column into a "target" column that utilized binary. We also dropped the"wealthC' column as we didn't need it anymore. We also needed to clean our data a bit in order to avoid errors in our model. To clean the data up we ran two loops. Our first loop found any of the null values in the education column and dropped those null values from the data. Our second loop reassigned the values in our education and gender column from floats to integers. Once our data was cleaned we moved on to training the model. 
 

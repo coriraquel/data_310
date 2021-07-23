@@ -35,4 +35,20 @@ We split our data up and had 30860 train examples, 7715 validation examples and 
     encoded_features.append(encoded_categorical_col)
 
     model.fit(train_ds, epochs=10, validation_data=val_ds)
+![country](../images/country_plot.png)
 #### Our Results 
+Below are our losses and accuracies for each of the wealth classes. Interestingly, as the wealth class became higher, so did our accuracy. This is in contrast to the model that we made yesterday, where the lower wealth classes had a higher accuracy.
+    
+    For wealth class 2 (35476 points) -
+    Loss: 0.5058
+    Accuracy: 0.7019909024238586
+    For wealth class 3 (38113 points) -
+    Loss: 0.4481
+    Accuracy: 0.7735379338264465
+    For wealth class 4 (42191 points) -
+    Loss: 0.2372
+    Accuracy: 0.8971381187438965
+    For wealth class 5 (43714 points) -
+    Loss: 0.1082
+    Accuracy: 0.9585234522819519
+In conclusion, this model performed better on higher wealth classes. The loss also decreased as the wealth class increased. This could be because the amount of points per wealth class increased with each class, so the model had more points to train on. Another possible explanation for this ascending accuracy could be the normalization function that we added in.

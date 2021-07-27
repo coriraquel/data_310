@@ -18,6 +18,7 @@
   - [Tuesday](Week_3/Tues3.md)
   - [Wednesday](Week_3/Wed2.md)
   - [Thursday](Week_3/Thurs3.md)
+  - [Project3](Week_3/Project_3.md)
 
 
 

@@ -37,6 +37,12 @@ Both models used gender as an indicator column, age as a bucketized column and s
     indicator_column = feature_column.indicator_column(categorical_column)
     feature_columns.append(indicator_column)
 
-Both of these models are okay but after producing the confusion matrices we can see that there is a data imbalance issue with the code being more likely to predict a 0 than a 1. 
-Since we are using binary due to the data being primarily in the lower wealth class as well as preprocessing some of our data to be in binary.
+Both of these models are okay but after producing the confusion matrices we can see that there is a data imbalance issue with the model being more likely to predict a 0 than a 1. 
+Since we are using binary our results are skewing negative due to the data being primarily in the lower wealth class (so they have more datapoints to be considered) as well as preprocessing some of our data to be in binary which results in more zeros within the data.
 While we were able to fix some of this imbalance by using sigmoid instead of softmax in our confusion matrices we still see that these models aren't preforming the best. 
+We will look at ways to improve this by considering a multi-class model. 
+
+### Multi-Class Categorical Model 
+
+
+### Improving the model 

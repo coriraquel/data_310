@@ -1,9 +1,11 @@
 ###Abstraction
+
 For this project I used the country_person.csv dataset to specify, train and evaluate models  that predict class of wealth versus all other classes as a binary target. 
 After receiving the accuracies for these models I investigated the datasets further using confusion matrices. From these matrices I was able to hypothesize possible solutions to improve the model's accuracy. 
 Once the accuracies improved I analyzed and documented my results below. 
 
 ###The Best and Worst Binary Models
+
 To begin this project I imported the country_persons.csv dataset and checked for any missing values within my data.
 For preprocessing I changed the gender column from binary to categorical labels and created a target column where the wealth class I was analyzing was equal to one and all other values were assigned to zero.
 The last step in my preprocessing was removing any columns I would not use during my analysis. I chose to drop weights, unit, hhid, location and pnmbr. 

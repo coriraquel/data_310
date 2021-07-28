@@ -1,26 +1,42 @@
-### Investigating the Dataset 
-For this project we investigated the country_peron.csv dataset and classified the data using Keras Preprocessing Layers to specify, train and evaluate the model that predicts the wealth class versus all other classes as binary and categorical targets.
-We will perform this process on the best and worst accuracies from our datasets. After preforming this process we will create a confusion matrix to further analyze our two producded results. 
+###Abstraction
+For this project I used the country_person.csv dataset to specify, train and evaluate models  that predict class of wealth versus all other classes as a binary target. 
+After receiving the accuracies for these models I investigated the datasets further using confusion matrices. From these matrices I was able to hypothesize possible solutions to improve the model's accuracy. 
+Once the accuracies improved I analyzed and documented my results below. 
 
-### Evaluating Accuracies 
-    For Wealth Class 1 (33382 points)- 
-    LossL 0.4225
-    Accuracy: 0.7533
-    For wealth class 2 (35476 points) -
-    Loss: 0.4197
-    Accuracy: 0.7579
-    For wealth class 3 (38113 points) -
-    Loss: 0.4190
-    Accuracy: 0.7587
-    For wealth class 4 (42191 points) -
-    Loss: 0.4202
-    Accuracy: 0.7621
-    For wealth class 5 (43714 points) -
-    Loss: 0.4184
-    Accuracy: 0.7563
-For this original test I ran the accuracies with the only modification being that I dropped columns that were not in use. Nothing was coded as binary or categorical, the model ran like the example model in tensorflow. After evaluating our accuracies for each wealth class we can see that wealth class 1 was the least accurate and wealth class 4 was the most accurate. While an explanation for this can be as simple as wealth class 4 having more available data points for training a more accurate model than wealth class 1 it is important to note that during this modeling process we added in a normalization function.  
+###The Best and Worst Binary Models
+To begin this project I imported the country_persons.csv dataset and checked for any missing values within my data.
+For preprocessing I changed the gender column from binary to categorical labels and created a target column where the wealth class I was analyzing was equal to one and all other values were assigned to zero.
+The last step in my preprocessing was removing any columns I would not use during my analysis. I chose to drop weights, unit, hhid, location and pnmbr. 
 
-### Binary Modeling Process 
-For the binary process I began by reading in the country_persons.csv file and cleaning my data. I decided to start out with a much smaller set of features to pull from in hopes of easing the process of getting rid of additional noise. After removing the usued columns I created a new target column in my dataframe then split the remaining data I had into testing and training data.
+    dataframe['gender'] = np.where(dataframe['gender'] == 1, 'male', 'female') 
+    dataframe['target'] = np.where(dataframe['wealth']== (insert wealth class here, 1, 0)
+    dataframe = dataframe.drop(columns=['weights','unit','hhid','location','pnmbr'])
+My best model was for wealth class 5 with a loss and accuracy of: 
 
-    dataframe = dataframe.drop(columns=['weights','unit','pnmbr','hhid','location','size'])
+    loss: 0.2846 - accuracy: 0.9057
+![image](../images/binwealth5.PNG)
+
+My worst model was for wealth class 1 with a loss and accuracy of: 
+
+    loss: 0.5935 - accuracy: 0.6866
+![image](../images/binwealth1.PNG)
+
+These models are both binary classifications models which had 1 predicted wealth class versus all other wealth classes. 
+Both of my models had an 128-neuron dense layer, a feature column layer, and a 0.1 dropout layer. 
+Both models used gender as an indicator column, age as a bucketized column and size and education as numeric columns. 
+
+    for header in ['age', 'size', 'education']:
+    feature_columns.append(feature_column.numeric_column(header))
+    age = feature_column.numeric_column('age')
+    age_buckets = feature_column.bucketized_column(age, boundaries=[30, 60])
+    feature_columns.append(age_buckets)
+    indicator_column_names = ['gender']
+    for col_name in indicator_column_names:
+    categorical_column = feature_column.categorical_column_with_vocabulary_list(
+    col_name, dataframe[col_name].unique())
+    indicator_column = feature_column.indicator_column(categorical_column)
+    feature_columns.append(indicator_column)
+
+Both of these models are okay but after producing the confusion matrices we can see that there is a data imbalance issue with the code being more likely to predict a 0 than a 1. 
+Since we are using binary due to the data being primarily in the lower wealth class as well as preprocessing some of our data to be in binary.
+While we were able to fix some of this imbalance by using sigmoid instead of softmax in our confusion matrices we still see that these models aren't preforming the best. 

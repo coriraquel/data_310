@@ -26,5 +26,5 @@ Project 1
   - [Project_1](Week_1/Project_1.md)
     
 Project 3 
-  - [Project3](Week_3/Project_3.md)
+  - [Project_3](Week_3/Project_3.md)
 

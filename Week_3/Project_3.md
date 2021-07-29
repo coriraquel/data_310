@@ -44,7 +44,26 @@ Since we are using binary our results are skewing negative due to the data being
 While we were able to fix some of this imbalance by using sigmoid instead of softmax in our confusion matrices we still see that these models aren't preforming the best. 
 We will look at ways to improve this by considering a multi-class model. 
 
-### Multi-Class Categorical Model 
+### Model with Multi Class and Improvements 
+The next model I performed as a multi-class problem that predicted wealth class as categorical data. Here are the results of accuracy and the confusion matrix.
+    
+    loss: 1.4660 - sparse_categorical_accuracy: 0.3315
+![image](../images/confusion.PNG)
 
+We can see that the accuracy for this model is not very high and that it is predicting the lower wealth class better than the higher wealth classes. When we are comparing all classes against each other instead of two it makes sense that the model is more likely to predict incorrectly when it goes from having 2 options to predict from to 5.
+So how can we improve this model?
 
-### Improving the model 
+To improve this model I began by going back to my original country_person.csv dataset and cleaning the data. I removed missing values from "age" and "education". This time around I kept the location column in the dataframe as well. 
+I used 'age', 'size', and 'education' as numeric columns. I bucketized education and age as well (I used numeric and bucketized on these two columns on purpose.) Then I used the indicator column on 'gender', 'location', 'potable', 'toilet', and 'cook'. I recompiled and fit my model to receive a new accuracy of:
+    
+    loss: 0.9663 - sparse_categorical_accuracy: 0.5585
+![image](../images/improve.PNG)
+We can see that just with these small changes our improvement is significantly better from our original model. Our model has more information and better ranges thanks to our indicator and bucketized columns to predict information accurately. While this model is still performing decently I wanted to challenge myself to see if I could get an even better performing model. 
+To do this I decided to bucketize my wealth column and increase my dropout layer significantly to help with overfitting. I also added car and electric to the indicator column. This gave me the best results by far I'm sure it's because there was some overfitting since I decided to bucketize the wealth column, I would need a line graph on testing and training data to see myself however, for the purpose of this project, and my own curiosity I wanted to try. Here are those results: 
+
+    loss: 0.3685 - sparse_categorical_accuracy: 0.8115
+![image](../images/improves.PNG)
+
+This model gave the best results by far and showed that the model had a harder time differing from people in similar wealth class and likely similar living circumstances. It helped to get rid of incorrect outliers in the prediction and made for the highest accuracy. I have a feeling if I went in and cleaned up some more of the dataset columns, turned location into binary then bucketized that column I would have a higher accuracy as well. 
+
+### Final Reflections and Thoughts 

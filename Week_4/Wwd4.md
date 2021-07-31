@@ -6,11 +6,10 @@ I chose the first image because it has been a pretty accurate representation of 
 I chose the second image because Starry Night is one of my favorite paintings because I think the colors are beautiful. Even though this summer has been very stressful it has been beautiful in a lot of new ways too which has made it one of my favorites!
 
 I had issues getting my stylized image to produce...well an image it just gave me an image line even when I put the stylzed image in print brackets. I included the result it provided for me as well as the code I ran for my image below! 
-
+#### The Image
     <PIL.Image.Image image mode=RGB size=512x512 at 0x229BE1D7BB0>
 
-
-
+#### The Code
     import os
     import tensorflow as tf
     # Load compressed models from tensorflow_hub

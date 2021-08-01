@@ -5,6 +5,8 @@ I also checked to see how many individual characters were in my script.
 
     65 unique characters
     Length of text: 1115394 characters
+
+
 ### Building and Training the Model 
 Once I was down understanding my data I moved on processing the text through vectorization. I converted each character to an individual numeric ID.
 After creating the IDs we made sure to convert back to alphabetical results after our processing to generate text. 

@@ -1,76 +1,28 @@
-### My Two Images 
+# Wednesday Informal Response 
+
+To produce my images I began by importing all my libraries of course and configuring my modules. Once that was done I found four images I felt represented my summer semester as a Data Scientist and saved those to co-lab and copied the download links to put into my python script. 
+After the images were downloaded I defined a function to show the four images in their maximum dimensions and displayed the images to ensure that everything had uploaded properly. 
+Finally, I did a Fast Style Transfer using TF-Hub to produce the two new images below. 
+
+##### Content Image 1
 ![image](../images/girl.jpg)
+##### Style Image 1
 ![image](../images/unnamed.jpg)
+##### Combined Image 1
+![image](../images/new_art.png)
 
-I chose the first image because it has been a pretty accurate representation of my summer and my time in Jump Start. I've spent many sleepy nights at my desk falling asleep at my computer and perking up for work the next day.
-I chose the second image because Starry Night is one of my favorite paintings because I think the colors are beautiful. Even though this summer has been very stressful it has been beautiful in a lot of new ways too which has made it one of my favorites!
+##### Content Image 2
+![image](../images/girl2.jpg)
+##### Style Image 2
+![image](../images/art2.jpg)
+##### Combined Image 2
+![image](../images/download.png)
 
-I had issues getting my stylized image to produce...well an image it just gave me an image line even when I put the stylzed image in print brackets. I included the result it provided for me as well as the code I ran for my image below! 
-#### The Image
-    <PIL.Image.Image image mode=RGB size=512x512 at 0x229BE1D7BB0>
+I chose my images because it was a pretty good representation of my summer which was spent majority of the time in front of the computer working and asleep! While, that can sound boring we see through my art work which includes one of my favorite paintings starry night, and a beautiful pastel painting I found shows that even though my summer was busy I enjoyed all of it. 
+Going forward as a Data Scientist I think my images remind me how I hope to continue to ground myself not only throughout college but my career. No matter how many times I end up working so late that I fall asleep in front of my computer, coding is one of my favorite things to do and like the paintings I chose, the magic of coding will always be beautiful and happy for me. 
 
-#### The Code
-    import os
-    import tensorflow as tf
-    # Load compressed models from tensorflow_hub
-    os.environ['TFHUB_MODEL_LOAD_FORMAT'] = 'COMPRESSED'
-    import IPython.display as display
-    import matplotlib.pyplot as plt
-    import matplotlib as mpl
-    mpl.rcParams['figure.figsize'] = (12, 12)
-    mpl.rcParams['axes.grid'] = False
-    import numpy as np
-    import PIL.Image
-    import time
-    import functools
-    import ssl
-    ssl._create_default_https_context = ssl._create_unverified_context
-    def tensor_to_image(tensor):
-    tensor = tensor*255
-    tensor = np.array(tensor, dtype=np.uint8)
-    if np.ndim(tensor)>3:
-    assert tensor.shape[0] == 1
-    tensor = tensor[0]
-    return PIL.Image.fromarray(tensor)
-    # content_path = tf.keras.utils.get_file('elie-khoury-GidYc-pS9sM-unsplash.jpg', 'https://unsplash.com/photos/GidYc-pS9sM')
-    content_path = 'image/girl.jpg'
-    # style_path = tf.keras.utils.get_file('europeana-pw-ap4Zp4CU-unsplash.jpg','https://unsplash.com/photos/pw-ap4Zp4CU')
-    style_path = 'image/art.jpg'
-    
-    def load_img(path_to_img):
-    max_dim = 512
-    img = tf.io.read_file(path_to_img)
-    img = tf.image.decode_image(img, channels=3)
-    img = tf.image.convert_image_dtype(img, tf.float32)
-    
-    shape = tf.cast(tf.shape(img)[:-1], tf.float32)
-    long_dim = max(shape)
-    scale = max_dim / long_dim
-    
-    new_shape = tf.cast(shape * scale, tf.int32)
-    
-    img = tf.image.resize(img, new_shape)
-    img = img[tf.newaxis, :]
-    return img
-    
-    def imshow(image, title=None):
-    if len(image.shape) > 3:
-    image = tf.squeeze(image, axis=0)
-    
-    plt.imshow(image)
-    if title:
-    plt.title(title)
+#### Stretch Goal 
+![image](../images/download2.png)
 
-    content_image = load_img(content_path)
-    style_image = load_img(style_path)
+This is the DeepDream script that I produced of my second image. And I loved it! It's very trippy and gives me vibez from the 90s. I think it was a really cool way to interpret and update my artwork. 
 
-    plt.subplot(1, 2, 1)
-    imshow(content_image, 'Content Image')
-
-    plt.subplot(1, 2, 2)
-    imshow(style_image, 'Style Image')
-
-    import tensorflow_hub as hub
-    hub_model = hub.load('https://tfhub.dev/google/magenta/arbitrary-image-stylization-v1-256/2')
-    stylized_image = hub_model(tf.constant(content_image), tf.constant(style_image))[0]
-    print(tensor_to_image(stylized_image))

@@ -1,4 +1,4 @@
-Project 4: Aashni, Cori, DJ, & Tyler
+#Project 4: Aashni, Cori, DJ, & Tyler
 The script we produced using our RNN model is linked here
 
 (1) How did you modify the data and python script in order to generate comprehensible text?

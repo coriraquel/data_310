@@ -21,7 +21,7 @@
   
 - Module 4 
   - [Wednesday](Week_4/Wwd4.md)
-  - 
+  - [Thursday](Week_4/Thurs4.md)
 
 
 
@@ -31,4 +31,7 @@ Project 1
     
 Project 3 
   - [Project_3](Week_3/Project_3.md)
+
+Project 4
+- [Project_4](Week_4/Proj_4.md)
 

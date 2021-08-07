@@ -4,3 +4,6 @@ As someone who is interested in day trading, I believe the biggest issue for day
 While that will be a long process I believe the first step is having computers be able to predict stock prices accurately! 
 Today, I will be using Amazon stock data up to 2018 from Quandl to predict Amazon stock prices for up to 30 days. 
 To do this I will be using multiple techniques including Data Scrapping, Linear Regression and Data Visualization. 
+
+### Video Submission 
+https://github.com/coriraquel/data_310/blob/971cddd6c21c579a7063bf21f046bec62f3def21/zoom_1.mp4

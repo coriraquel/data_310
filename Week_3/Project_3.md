@@ -16,11 +16,13 @@ The last step in my preprocessing was removing any columns I would not use durin
 My best model was for wealth class 5 with a loss and accuracy of: 
 
     loss: 0.2846 - accuracy: 0.9057
+
 ![image](../images/binwealth5.PNG)
 
 My worst model was for wealth class 1 with a loss and accuracy of: 
 
     loss: 0.5935 - accuracy: 0.6866
+
 ![image](../images/binwealth1.PNG)
 
 These models are both binary classifications models which had 1 predicted wealth class versus all other wealth classes. 
@@ -57,11 +59,13 @@ To improve this model I began by going back to my original country_person.csv da
 I used 'age', 'size', and 'education' as numeric columns. I bucketized education and age as well (I used numeric and bucketized on these two columns on purpose.) Then I used the indicator column on 'gender', 'location', 'potable', 'toilet', and 'cook'. I recompiled and fit my model to receive a new accuracy of:
     
     loss: 0.9663 - sparse_categorical_accuracy: 0.5585
+
 ![image](../images/improve.PNG)
 We can see that just with these small changes our improvement is significantly better from our original model. Our model has more information and better ranges thanks to our indicator and bucketized columns to predict information accurately. While this model is still performing decently I wanted to challenge myself to see if I could get an even better performing model. 
 To do this I decided change 'toliet' and 'potable' into numeric values and bucketize those results. I increased my dropout layer to help with overfitting. I also added car and electric to the indicator column. This gave me the best results by far I'm sure it's because there was some overfitting since I decided to change some of the categorical data to binary, I would need a line graph on testing and training data to see myself however, for the purpose of this project, and my own curiosity I wanted to try. Here are those results: 
 
     loss: 0.3685 - sparse_categorical_accuracy: 0.8115
+
 ![image](../images/improves.PNG)
 
 This model gave the best results by far and showed that the model had a harder time differing from people in similar wealth class and likely similar living circumstances. It helped to get rid of incorrect outliers in the prediction and made for the highest accuracy. I have a feeling if I went in and cleaned up some more of the dataset columns, turned location into binary then bucketized that column I would have a higher accuracy as well. 

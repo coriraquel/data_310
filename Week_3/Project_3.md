@@ -50,6 +50,7 @@ We will look at ways to improve this by considering a multi-class model.
 The next model I performed as a multi-class problem that predicted wealth class as categorical data. Here are the results of accuracy and the confusion matrix.
     
     loss: 1.4660 - sparse_categorical_accuracy: 0.3315
+
 ![image](../images/confusion.PNG)
 
 We can see that the accuracy for this model is not very high and that it is predicting the lower wealth class better than the higher wealth classes. When we are comparing all classes against each other instead of two it makes sense that the model is more likely to predict incorrectly when it goes from having 2 options to predict from to 5.
